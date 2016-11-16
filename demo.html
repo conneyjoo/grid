@@ -1,0 +1,189 @@
+<html>
+<head>
+	<title>grid demo</title>	
+	
+	<link rel="stylesheet" type="text/css" href="dashboard/style/Admin-all_1.css">
+	<link rel="stylesheet" type="text/css" href="dashboard/style/Admin-all_2.css">
+	<link rel="stylesheet" type="text/css" href="dashboard/style/Admin-all_3.css">
+	<link rel="stylesheet" type="text/css" href="dashboard/style/ExecDashboard-grid.css">
+	
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	
+    <link rel="stylesheet" type="text/css" href="grid.css">
+	
+    <script type="text/javascript" src="jquery-1.8.1.js"></script>
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="grid.js"></script>
+	
+	<script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+	<input type="hidden" id="userTypes" value='${userTypes}' />
+	
+	<div class="page-header" style="margin: 20px;">
+		<form id="searchForm" style="padding-bottom: 40px;">
+			
+		</form>
+	</div>
+	
+	<div class="x-panel x-grid-locked x-tabpanel-child x-panel-default x-grid" style="right: auto;">
+		<div class="x-panel x-panel-body x-grid-inner-normal x-panel-default x-grid" style="right: auto; left: 0px; top: 0px; margin: 0px; width: 100%;">
+			<div class="x-column-header x-column-header-align-center x-column-header-default x-column-header-first" style="width: 5%; height: 47px; right: auto;">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			        	序号
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 7%; height: 47px; right: auto; left: 5.1%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	姓名
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 7%; height: 47px; right: auto; left: 12.2%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	昵称
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 5%; height: 47px; right: auto; left: 19.3%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+		           		性别
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 5%; height: 47px; right: auto; left: 24.4%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	用户类型
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 10%; height: 47px; right: auto; left: 29.5%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	手机号
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 10%; height: 47px; right: auto; left: 39.6%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	邮箱
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 5%; height: 47px; right: auto; left: 49.7%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	系统用户
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 5%; height: 47px; right: auto; left: 54.8%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	登录状态
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 10%; height: 47px; right: auto; left: 59.9%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	要求更变密码标记 
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 10%; height: 47px; right: auto; left: 70%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	无效日期时间
+			        </span>
+			    </div>
+			</div>
+			<div class="x-column-header x-column-header-align-center x-column-header-default" style="width: 19%; height: 47px; right: auto; left: 81.1%; ">
+			    <div class="x-column-header-inner x-leaf-column-header">
+			        <span class="x-column-header-text-inner">
+			           	连续失败登陆次数
+			        </span>
+			    </div>
+			</div>
+			
+			<div class="x-panel-body x-grid-with-row-lines x-grid-body x-panel-body-default x-noborder-rbl" style="left: 0px; top: 47px; margin-bottom: 48px;">
+		        <div class="x-grid-item-container grid">
+		            <table class="x-grid-item" style="width: 99.2%; table-layout: auto;">
+	       				<tbody>
+	                     	<tr>
+	                       		<td style="width: 5.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                             		{rowIndex}
+	                            	</div>
+	                         	</td>
+	                         	<td style="width: 7.1%;">
+									<div class="x-grid-cell-inner" style="text-align: center;">
+	                                 	{lastName} {firstName}
+	                             	</div>
+		                         </td>
+	                         	<td style="width: 7.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{nickName}
+	                             	</div>
+	                         	</td>
+	                        		<td style="width: 5.1%;">
+									<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{sex}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 5.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{userType}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 10.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{mobilePhone}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 10.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{emailAddress}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 5.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{isSystem}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 5.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{hasLoggedOut}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 10.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{requirePasswordChange}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 10.1%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{disabledDateTime}
+	                             	</div>
+	                         	</td>
+	                         	<td style="width: 19%;">
+	                           		<div class="x-grid-cell-inner" style="text-align: center;">
+	                               		{successiveFailedLogins}
+	                             	</div>
+	                         	</td>
+	                   		</tr>
+	                 	</tbody>
+		            </table>
+		        </div>
+			</div>
+	    </div>
+	</div>
+</body>
+</html>
