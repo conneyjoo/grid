@@ -78,8 +78,8 @@ $.util.property = function(o, p) {
 };
 
 $.util.fullProperty = function(s, data) {
-	return s.replace(/\{([\w\-]+)\}/g, function(m, name) {
-		return data[name] !== undefined ? data[name] : ''
+	return s.replace(/\{([\w\-.]+.)\}/g, function(m, name) {
+		return $.util.property(data, name) !== undefined ? $.util.property(data, name) : ''
 	})
 };
 
